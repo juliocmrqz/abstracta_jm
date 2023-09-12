@@ -13,15 +13,22 @@ It's created using the Singleton design pattern in Java in which I instance the 
 It uses the Page Object Model Paradigm in which every page is considered a different object which can extend a page base
 with all the available methods to use in every page.
 
-It also has the possibility to create reports using allure
+```java
+public class PageBase {
+}
 
+public class MLMainPage extends PageBase {
+}
+
+public class MLResultsPage extends PageBase {
+}
+```
+
+It also has the possibility to create reports using allure
 ![img.png](img.png)
 
-```java
-public class PageBase {}
-public class MLMainPage extends PageBase {}
-public class MLResultsPage extends PageBase {}
-```
+You need to have install allure and added to your path variables. Once you do that, using the following command
+```allure serve allure-report``` The allure system will generate and serve the report for you in a browser tab.
 
 ## Dependencies
 
@@ -86,4 +93,4 @@ public class MLResultsPage extends PageBase {}
 1. Clone this repository
 2. Set up your Selenium tests using the provided dependencies.
 3. Write your Selenium test scripts.
-4. Run your tests.
+4. Run your tests using ```mvn clean test```
